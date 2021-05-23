@@ -1,0 +1,7 @@
+{
+  "name": "scanlob",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
