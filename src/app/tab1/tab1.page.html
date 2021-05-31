@@ -1,18 +1,67 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
+  <ion-toolbar class="py-5 w-full h-24 flex items-center">
     <ion-buttons slot="start">
       <ion-menu-button>
-        <ion-icon name="menu" color="primary"></ion-icon>
+        <ion-icon name="menu" class="text-3xl text-purple-500"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
-    <ion-title>Liste des produits</ion-title>
+    <ion-title>
+      <span class="block text-lg font-semibold text-center">Liste des produits</span>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10">
+        <ion-searchbar></ion-searchbar>
+      </ion-col>
+      <ion-col size="2">
+        <div class="flex items-center justify-center w-full h-full py-1">
+          <div class="w-full h-full bg-yellow-400 flex items-center justify-center rounded-2xl">
+            <ion-icon name="options" class="text-2xl"></ion-icon>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-categories></app-categories>
   <ion-item>
     <ion-label>
-      Categories
+      <span class="text-xl font-semibold">Populaire</span>
     </ion-label>
+    <ion-note slot="end">
+      <span class="text-sm text-yellow-500">view all (155)</span>
+    </ion-note>
   </ion-item>
-  <app-categories></app-categories>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <app-card></app-card>
+      </ion-col>
+      <ion-col size="12">
+        <app-card></app-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <ion-label>
+      <span class="text-xl font-semibold">Featured</span>
+    </ion-label>
+    <ion-note slot="end">
+      <span class="text-sm text-yellow-500">view all (155)</span>
+    </ion-note>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <app-card></app-card>
+      </ion-col>
+      <ion-col size="12">
+        <app-card></app-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
 </ion-content>

@@ -1,2 +1,33 @@
+<ion-card class="rounded-2xl">
+    <ion-card-content>
+      <div class="flex items-start h-28 justify-between">
+        <div class="w-28 h-28 mr-4">
+          <img src="https://i.pravatar.cc/400" class="w-full h-28 rounded-3xl" />
+        </div>
+        <div class="flex-1 flex flex-col justify-between h-28">
+          <div>
+            <span class="block text-xs">Categorie 1</span>
 
- 
+            <div class="text-sm font-semibold text-black mb-2">Nom de produit</div>
+
+            <span class="block text-xs text-gray-500 mb-2"
+              >Lorem ipsum dolor sit.</span
+            >
+          </div>
+          <span class="block text-lg text-green-400 font-normal">10.124 €</span>
+
+        </div>
+        <div class="flex flex-col justify-between h-28">
+          <div class="w-8 h-8 bg-gray-200 rounded-xl flex items-center justify-center" (click)="addToCart()">
+            <ion-icon name="add" class="text-purple-500"></ion-icon>
+          </div>
+          <div class="w-8 h-8 flex items-center justify-center">
+            <span class="text-black font-bold">{{cart}}</span>
+          </div>
+          <div class="w-8 h-8 bg-gray-200 rounded-xl flex items-center justify-center">
+            <ion-icon name="remove" class="text-purple-500"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+</ion-card>

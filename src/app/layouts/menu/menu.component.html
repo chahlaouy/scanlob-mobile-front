@@ -1,16 +1,35 @@
 <ion-menu side="start" menuId="menu" contentId="content">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Start Menu</ion-title>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-item class="py-10 cc" lines="none">
+        <!-- <ion-avatar slot="start">
+          <img src="https://i.pravatar.cc/300">
+        </ion-avatar> -->
+        <div class="p-2 mr-2 rounded-full bg-purple-300">
+          <img src="https://i.pravatar.cc/300" class="w-20 h-20 rounded-full">
+        </div>
+        <ion-label>
+          <span class="block text-xl text-gray-100">John doe</span> 
+          <span class="block text-xs text-gray-100">email@email.com</span> 
+        </ion-label>
+      </ion-item>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
+    <ion-list class="mt-12">
+      <ion-item class="text-gray-500">
+        <ion-label>Profile</ion-label>
+        <ion-icon slot="end" name="person-outline" class="text-purple-500"></ion-icon>
+      </ion-item>
+      <ion-item class="text-gray-500">
+        <ion-label>Déclaration</ion-label>
+        <ion-icon slot="end" name="add-circle-outline" class="text-purple-500"></ion-icon>
+      </ion-item>
+      <ion-item class="text-gray-500">
+        <ion-label>Déconnexion</ion-label>
+        <ion-icon slot="end" name="log-out-outline" class="text-purple-500"></ion-icon>
+      </ion-item>
+      
     </ion-list>
   </ion-content>
 </ion-menu>
