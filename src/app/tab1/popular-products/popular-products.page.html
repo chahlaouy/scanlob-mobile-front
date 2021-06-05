@@ -33,7 +33,6 @@
     <ion-label>
       <span class="text-xl font-semibold">Populaires</span>
     </ion-label>
-    
   </ion-item>
   <ion-grid>
     <ion-row>
@@ -75,8 +74,11 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
-  
-
- 
+  <ion-infinite-scroll (ionInfinite)="loadMoreData($event)" threshold="10px">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Chargement ...."
+    >
+    </ion-infinite-scroll-content>
+</ion-infinite-scroll>
 </ion-content>

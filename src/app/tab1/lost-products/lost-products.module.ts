@@ -1,3 +1,4 @@
+import { CategoryModule } from './../../layouts/categories/categories.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +14,8 @@ import { LostProductsPage } from './lost-products.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    LostProductsPageRoutingModule
+    LostProductsPageRoutingModule,
+    CategoryModule
   ],
   declarations: [LostProductsPage]
 })

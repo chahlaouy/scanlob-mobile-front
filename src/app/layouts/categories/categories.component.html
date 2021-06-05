@@ -4,85 +4,56 @@
 
 <ion-grid>
   <ion-row>
-    <ion-col button="true">
-      <div class="w-full flex items-center justify-center"  (click)="goToHomeProducts()">
+    <ion-col button="true" routerLink="/tabs/tab1">
+      <div class="w-full flex items-center justify-center">
         <div
-          class="
-            w-12
-            h-12
-            bg-purple-500
-            mb-2
-            rounded-full
-            flex
-            items-center
-            justify-center
-            shadow-xl
+          [class]="
+          active === 'all' ? 'w-12 h-12 bg-purple-500 mb-2 rounded-full flex items-center justify-center shadow-xl' : 'w-12 h-12 bg-purple-200 mb-2 rounded-full flex items-center justify-center shadow-xl'
           "
         >
-          <ion-icon name="list" class="text-gray-100 text-xl"></ion-icon>
+          <ion-icon name="list" [class]="active === 'all' ? 'text-gray-100 text-xl' : 'text-purple-500 text-xl'"></ion-icon>
+
         </div>
       </div>
-      <span class="block text-center text-xs text-gray-400">Tous</span>
+      <span [class]="active === 'all' ? 'block text-center text-xs text-gray-800 font-semibold' : 'block text-center text-xs text-gray-400'"> Tous</span>
+
     </ion-col>
-    <ion-col>
-      <div class="w-full flex items-center justify-center" (click)="goToRecentProducts()">
+    <ion-col  routerLink="/tabs/tab1/recent-products">
+      <div class="w-full flex items-center justify-center">
         <div
-          class="
-            w-12
-            h-12
-            bg-purple-200
-            mb-2
-            rounded-full
-            flex
-            items-center
-            justify-center
-            shadow-xl
-          "
+        [class]="
+        active === 'recent' ? 'w-12 h-12 bg-purple-500 mb-2 rounded-full flex items-center justify-center shadow-xl' : 'w-12 h-12 bg-purple-200 mb-2 rounded-full flex items-center justify-center shadow-xl'
+        "
         >
-          <ion-icon name="rocket" class="text-purple-500 text-xl"></ion-icon>
+          <ion-icon name="rocket" [class]="active === 'recent' ? 'text-gray-100 text-xl' : 'text-purple-500 text-xl'"></ion-icon>
         </div>
       </div>
-      <span class="block text-center text-xs text-gray-400">Récentes</span>
+      <span [class]="active === 'recent' ? 'block text-center text-xs text-gray-800 font-semibold' : 'block text-center text-xs text-gray-400'">Récentes</span>
+
     </ion-col>
-    <ion-col>
-      <div class="w-full flex items-center justify-center"  (click)="goToPopularProducts()">
+    <ion-col routerLink="/tabs/tab1/popular-products">
+      <div class="w-full flex items-center justify-center">
         <div
-          class="
-            w-12
-            h-12
-            bg-purple-200
-            mb-2
-            rounded-full
-            flex
-            items-center
-            justify-center
-            shadow-xl
-          "
+        [class]="
+        active === 'popular' ? 'w-12 h-12 bg-purple-500 mb-2 rounded-full flex items-center justify-center shadow-xl' : 'w-12 h-12 bg-purple-200 mb-2 rounded-full flex items-center justify-center shadow-xl'
+        "
         >
-          <ion-icon name="diamond" class="text-purple-500 text-xl"></ion-icon>
+          <ion-icon name="diamond" [class]="active === 'popular' ? 'text-gray-100 text-xl' : 'text-purple-500 text-xl'"></ion-icon>
         </div>
       </div>
-      <span class="block text-center text-xs text-gray-400">Populaires</span>
+      <span  [class]="active === 'popular' ? 'block text-center text-xs text-gray-800 font-semibold' : 'block text-center text-xs text-gray-400'">Populaires</span>
     </ion-col>
-    <ion-col>
-      <div class="w-full flex items-center justify-center"  (click)="goToLostProducts()">
+    <ion-col routerLink="/tabs/tab1/lost-products">
+      <div class="w-full flex items-center justify-center">
         <div
-          class="
-            w-12
-            h-12
-            bg-purple-200
-            mb-2
-            rounded-full
-            flex
-            items-center
-            justify-center
-            shadow-xl
-          "
+        [class]="
+        active === 'lost' ? 'w-12 h-12 bg-purple-500 mb-2 rounded-full flex items-center justify-center shadow-xl' : 'w-12 h-12 bg-purple-200 mb-2 rounded-full flex items-center justify-center shadow-xl'
+        "
         >
-          <ion-icon name="telescope" class="text-purple-500 text-xl"></ion-icon>
+          <ion-icon name="telescope" [class]="active === 'lost' ? 'text-gray-100 text-xl' : 'text-purple-500 text-xl'"></ion-icon>
         </div>
       </div>
-      <span class="block text-center text-xs text-gray-400">Objets perdu</span>
+      <span [class]="active === 'lost' ? 'block text-center text-xs text-gray-800 font-semibold' : 'block text-center text-xs text-gray-400'">Objets perdu</span>
     </ion-col>
     
   </ion-row>

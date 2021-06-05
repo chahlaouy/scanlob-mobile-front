@@ -19,9 +19,9 @@ export class ProductService {
     );
   }
 
-  getAllProducts(pageNumber: number = 1): Observable<ProductModel[]> {
-    return this.httpClient.get<ProductModel[]>(
-      `${this.url}/products?page=${pageNumber}&per_page=10`
+  getAllProducts(pageNumber: number = 1): Observable<any> {
+    return this.httpClient.get<any>(
+      `${this.url}/products?page=${pageNumber}`
     );
   }
 
