@@ -1,3 +1,4 @@
+import { CategoryModule } from './../layouts/categories/categories.module';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,7 +7,7 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { Tab1Page } from './tab1.page';
 
 import { CardComponent } from '../layouts/card/card.component'
-import { CategoriesComponent } from '../layouts/categories/categories.component'
+
 
 
 @NgModule({
@@ -14,8 +15,9 @@ import { CategoriesComponent } from '../layouts/categories/categories.component'
     IonicModule,
     CommonModule,
     FormsModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    CategoryModule
   ],
-  declarations: [Tab1Page, CategoriesComponent, CardComponent]
+  declarations: [Tab1Page, CardComponent]
 })
 export class Tab1PageModule {}

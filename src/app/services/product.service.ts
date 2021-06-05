@@ -13,6 +13,12 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) {}
 
+  getDiversProducts(): Observable<any> {
+    return this.httpClient.get<any>(
+      `${this.url}/products/home-products`
+    );
+  }
+
   getAllProducts(pageNumber: number = 1): Observable<ProductModel[]> {
     return this.httpClient.get<ProductModel[]>(
       `${this.url}/products?page=${pageNumber}&per_page=10`

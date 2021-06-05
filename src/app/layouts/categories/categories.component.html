@@ -5,7 +5,7 @@
 <ion-grid>
   <ion-row>
     <ion-col button="true">
-      <div class="w-full flex items-center justify-center"  (click)="getAllProducts()">
+      <div class="w-full flex items-center justify-center"  (click)="goToHomeProducts()">
         <div
           class="
             w-12
@@ -25,7 +25,7 @@
       <span class="block text-center text-xs text-gray-400">Tous</span>
     </ion-col>
     <ion-col>
-      <div class="w-full flex items-center justify-center">
+      <div class="w-full flex items-center justify-center" (click)="goToRecentProducts()">
         <div
           class="
             w-12
@@ -45,7 +45,7 @@
       <span class="block text-center text-xs text-gray-400">Récentes</span>
     </ion-col>
     <ion-col>
-      <div class="w-full flex items-center justify-center">
+      <div class="w-full flex items-center justify-center"  (click)="goToPopularProducts()">
         <div
           class="
             w-12
@@ -65,7 +65,7 @@
       <span class="block text-center text-xs text-gray-400">Populaires</span>
     </ion-col>
     <ion-col>
-      <div class="w-full flex items-center justify-center">
+      <div class="w-full flex items-center justify-center"  (click)="goToLostProducts()">
         <div
           class="
             w-12

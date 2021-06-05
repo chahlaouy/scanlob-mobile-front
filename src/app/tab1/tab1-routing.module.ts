@@ -10,6 +10,18 @@ const routes: Routes = [
   {
     path: 'product-details/:id',
     loadChildren: () => import('./product-details/product-details.module').then( m => m.ProductDetailsPageModule)
+  },
+  {
+    path: 'popular-products',
+    loadChildren: () => import('./popular-products/popular-products.module').then( m => m.PopularProductsPageModule)
+  },
+  {
+    path: 'recent-products',
+    loadChildren: () => import('./recent-products/recent-products.module').then( m => m.RecentProductsPageModule)
+  },
+  {
+    path: 'lost-products',
+    loadChildren: () => import('./lost-products/lost-products.module').then( m => m.LostProductsPageModule)
   }
 ];
 

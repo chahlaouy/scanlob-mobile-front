@@ -4,8 +4,6 @@ export interface LostProductModel {
     id: Number
     name: String
     slug: String
-    price: Number
-    quantity: Number
     img_urls: any[]
     user: UserModel
     category: CategoryModel 

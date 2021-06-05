@@ -6,6 +6,7 @@ export interface ProductModel {
     id: Number
     name: String
     slug: String
+    description: String
     price: Number
     quantity: Number
     img_urls: any[]

@@ -1,0 +1,82 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="py-5 w-full h-24 flex items-center">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="menu" class="text-3xl text-purple-500"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <span class="block text-lg font-normal">Liste des produits</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10">
+        <ion-searchbar></ion-searchbar>
+      </ion-col>
+      <ion-col size="2">
+        <div class="flex items-center justify-center w-full h-full py-1">
+          <div class="w-full h-full bg-yellow-400 flex items-center justify-center rounded-2xl">
+            <ion-icon name="options" class="text-2xl"></ion-icon>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-categories active="popular"></app-categories>
+  
+
+  <ion-item>
+    <ion-label>
+      <span class="text-xl font-semibold">Populaires</span>
+    </ion-label>
+    
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let product of listArrayOfPopularProducts">
+        <ion-card class="rounded-2xl">
+          <ion-card-content>
+            <div class="flex items-start h-28 justify-between">
+              <div class="w-28 h-28 mr-4">
+                <img src="https://i.pravatar.cc/400" class="w-full h-28 rounded-3xl" />
+              </div>
+              <div class="flex-1 flex flex-col justify-between h-28">
+                <div>
+                  <span class="block text-xs">{{product.category.name}}</span>
+                  
+                  <div class="text-sm font-semibold text-black mb-2">{{product.name}}</div>
+
+                  <span class="block text-xs text-gray-500 mb-2 w-28 truncate"
+                  >{{product.description}}</span>
+
+                 
+                </div>
+                <span class="block text-lg text-green-400 font-normal">{{product.price}} €</span>
+      
+              </div>
+              <div class="flex flex-col justify-between h-28">
+                <div class="w-8 h-8 bg-gray-200 rounded-xl flex items-center justify-center">
+                  <ion-icon name="add" class="text-purple-500"></ion-icon>
+                </div>
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <span class="text-black font-bold">0</span>
+                </div>
+                <div class="w-8 h-8 bg-gray-200 rounded-xl flex items-center justify-center">
+                  <ion-icon name="remove" class="text-purple-500"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+      </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+
+ 
+</ion-content>

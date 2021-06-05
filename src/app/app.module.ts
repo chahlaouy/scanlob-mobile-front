@@ -11,10 +11,11 @@ import { AppComponent } from './app.component';
 
 import { MenuComponent } from './layouts/menu/menu.component'
 
+
 @NgModule({
   declarations: [
     AppComponent, 
-    MenuComponent
+    MenuComponent,
   ],
   entryComponents: [],
   imports: [BrowserModule, 
