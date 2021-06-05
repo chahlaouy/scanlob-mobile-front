@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ProductResolverService } from './services/product-resolver.service';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
 
-  exports: [RouterModule]
+  exports: [RouterModule],
+  // providers: [ProductResolverService]
 })
 export class AppRoutingModule {}

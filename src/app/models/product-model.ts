@@ -15,5 +15,8 @@ export interface ProductModel {
     qrcode: QrcodeModel
     replies: any[] 
     created_at: any[]
+    favorites_count: any
+    comments_count: any
+    comments: any[]
     updated_at: any[]
 }

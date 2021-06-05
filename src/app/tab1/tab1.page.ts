@@ -40,4 +40,15 @@ export class Tab1Page implements OnInit{
       })
   }
 
+
+  loadingSpinner() {
+    this.loadingController.create({
+        message: "Chargement ...",
+        animated: true,
+        spinner: "crescent",
+        backdropDismiss: false,
+        showBackdrop: true
+    }).then(el => el.present());
+}
+
 }

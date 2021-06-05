@@ -14,8 +14,8 @@
   
   <ion-grid>
     <ion-row>
-      <ion-col size="10">
-        <ion-searchbar></ion-searchbar>
+      <ion-col size="10" routerLink="/search">
+        <ion-searchbar disabled="true" ></ion-searchbar>
       </ion-col>
       <ion-col size="2">
         <div class="flex items-center justify-center w-full h-full py-1">
@@ -40,7 +40,7 @@
         <ion-card class="rounded-2xl">
           <ion-card-content>
             <div class="flex items-start h-28 justify-between">
-              <div class="w-28 h-28 mr-4">
+              <div class="w-28 h-28 mr-4" (click)="loadingSpinner()" routerLink="/tabs/tab1/product-details/{{ product.id }}">
                 <img src="https://i.pravatar.cc/400" class="w-full h-28 rounded-3xl" />
               </div>
               <div class="flex-1 flex flex-col justify-between h-28">

@@ -1,7 +1,6 @@
-
-import { ProductService } from 'src/app/services/product.service';
+import { ProductModel } from './../../models/product-model';
 import { Component, OnInit } from '@angular/core';
-import {LoadingController, ToastController} from "@ionic/angular";
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -25,28 +24,17 @@ export class ProductDetailsPage implements OnInit {
       loop: true
   }
 
-  private product;
+  product: ProductModel;
+    showData = false;
 
-  constructor(
-    private productServ: ProductService, 
-    private loadingController: LoadingController,
-    private toastController: ToastController) { }
+    constructor(private route: ActivatedRoute) {
+    }
 
-    async ngOnInit() {
-      const loader = await this.loadingController.create({
-          message: 'Chargement du produit..',
-          spinner: "bubbles",
-          animated: true
-      });
-      await loader.present().then();
-      this.productServ.getProductById(1).subscribe(async (product) => {
-          await loader.dismiss().then();
-          this.product = product;
-      }, async (err) => {
-          await loader.dismiss().then();
-          console.log(err);
-      })
-
-  }
+    ngOnInit() {
+        this.route.data.subscribe((data: { product: ProductModel }) => {
+            this.product = data.product;
+            this.showData = true;
+        });
+    }
 
 }
