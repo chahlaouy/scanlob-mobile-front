@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-categories',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productServ: ProductService) { }
 
   ngOnInit() {}
-
+  
+  getAllProducts(){
+    this.productServ.getAllProducts().subscribe(data => {
+      data.forEach(p => {
+      })
+    })
+  }
 }

@@ -1,0 +1,64 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar class="pt-5 w-full h-24 flex items-center">
+
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="menu" class="text-3xl"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search" class="text-xl" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="px-12 flex flex-col items-center justify-center">
+    <img src="https://i.pravatar.cc/500" class="w-48 h-48 rounded-3xl mb-4" />
+    <div class="mb-4 text-center">
+      <span class="block text-lg text-black">this product 1</span>
+      <span class="block text-xs text-gray-400 tracking-wide">Lorem ipsum dolor sit amet consectetur</span>
+    </div>
+  </div>
+  <ion-card class="mx-0 rounded-2xl mb-8">
+    <ion-card-header>
+      <ion-card-subtitle>Catgory</ion-card-subtitle>
+      <ion-card-title>Prodyct name</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div class="">
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </div>
+      <ion-item lines="full">
+        <ion-label slot="start">
+          <ion-icon name="heart" class="text-red-400"></ion-icon>
+        </ion-label>
+        <ion-label slot="end">
+          <ion-icon name="chatbubbles" class="text-purple-400"></ion-icon>
+          <ion-text>
+            <span class="text-xs ml-2">125</span>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+      <!-- <div class="flex items-center justify-between">
+        <span></span>
+      </div> -->
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="mx-0 rounded-2xl mb-8">
+    <ion-card-header>
+      <ion-card-subtitle>Catgory</ion-card-subtitle>
+      <ion-card-title>Prodyct name</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

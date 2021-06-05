@@ -1,4 +1,3 @@
-import { ProductService } from './../services/product.service';
 import { Component } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
 
@@ -8,7 +7,7 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['tabs.page.scss'],
 })
 export class TabsPage {
-  constructor(public actionSheetController: ActionSheetController, private productServ: ProductService) {}
+  constructor(public actionSheetController: ActionSheetController) {}
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: "Déclaration D'un Object",
@@ -44,6 +43,6 @@ export class TabsPage {
 
     const { role } = await actionSheet.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
-    this.productServ.getAllProducts()
+    
   }
 }
