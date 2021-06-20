@@ -1,3 +1,4 @@
+import { FilterModule } from './../../layouts/filter/filter.module';
 import { CategoryModule } from './../../layouts/categories/categories.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,14 +12,14 @@ import { PopularProductsPage } from './popular-products.page';
 
 
 
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     PopularProductsPageRoutingModule,
-    CategoryModule
+    CategoryModule,
+    FilterModule
   ],
   declarations: [PopularProductsPage]
 })

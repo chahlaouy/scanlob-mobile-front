@@ -5,14 +5,58 @@
         <ion-icon name="menu" color="primary"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
-    <ion-title>Liste des produits</ion-title>
+    <ion-title>
+      <span class="text-sm">
+        Mon Panier
+      </span>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label>
-      Categories
+      <span class="text-xl font-semibold">Panier</span>
     </ion-label>
   </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let product of cart.product, let i = index">
+        <ion-card class="rounded-2xl">
+          <ion-card-content>
+            <div class="flex items-start h-28 justify-between">
+              <div class="w-28 h-28 mr-4" (click)="loadingSpinner()" routerLink="/tabs/tab1/product-details/{{ product.id }}">
+                <img src="https://img01.ztat.net/article/spp-media-p1/6d1962428f7f373c99c31cf5914aaed7/dbf9580544da4871a5b99a1ce189c351.jpg?imwidth=1800" class="w-full h-28 rounded-3xl" />
+              </div>
+              <div class="flex-1 flex flex-col justify-between h-28">
+                <div>
+                  <span class="block text-xs">{{product.category.name}}</span>
+                  
+                  <div class="text-sm font-semibold text-black mb-2">{{product.name}}</div>
+
+                  <span class="block text-xs text-gray-500 mb-2 w-28 truncate"
+                  >{{product.description}}</span>
+
+                 
+                </div>
+                <span class="block text-lg text-green-400 font-normal">{{product.price}} TND</span>
+      
+              </div>
+              <div class="flex flex-col justify-between h-28">
+                <div class="w-8 h-8 bg-gray-200 rounded-xl flex items-center justify-center" (click)="addProduct(product)">
+                  <ion-icon name="add" class="text-purple-500"></ion-icon>
+                </div>
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <span class="text-black font-bold">{{product.in_cart}}</span>
+                </div>
+                <div class="w-8 h-8 bg-gray-200 rounded-xl flex items-center justify-center" (click)="subProduct(product, i)">
+                  <ion-icon name="remove" class="text-purple-500"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+      </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 

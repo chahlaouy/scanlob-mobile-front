@@ -37,7 +37,7 @@
     <ion-card-content>
       <div class="mb-4">{{product.description}}</div>
       <div class="mb-4 flex justify-end">
-        <span class="block text-xl text-black tracking-wide">{{product.price}} £</span>
+        <span class="block text-xl text-black tracking-wide">{{product.price}} TND</span>
       </div>
       <ion-item lines="full">
         <ion-label slot="start">
@@ -59,7 +59,7 @@
             </div>
           </div>
         </ion-label>
-        <ion-label slot="end" button="true">
+        <ion-label slot="end" button="true"  (click)="addProduct(product)">
           <ion-icon name="cart" class="text-xl text-gray-800"></ion-icon>
         </ion-label>
       </ion-item>

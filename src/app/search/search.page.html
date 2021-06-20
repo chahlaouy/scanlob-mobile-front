@@ -30,16 +30,16 @@
           <ion-item *ngFor="let p of filteredProducts" detail>
 
             <ion-avatar slot="start">
-              <img src="https://i.pravatar.cc/400">
+              <img src="https://img01.ztat.net/article/spp-media-p1/6d1962428f7f373c99c31cf5914aaed7/dbf9580544da4871a5b99a1ce189c351.jpg?imwidth=1800">
             </ion-avatar>
             <ion-label>
               {{ p.name }}
               <ion-text>
-                <p class="text-xs text-gray-400 tracking-wide mb-2">{{ p.description }}</p>
+                <p class="text-xs text-gray-400 tracking-wide mb-2">{{ p.category.name }}</p>
               </ion-text>
               <ion-text>
                 <div class="flex justify-end">
-                  <p class="text-xs text-black tracking-wide">{{ p.price }} $</p>
+                  <p class="text-xs text-black tracking-wide">{{ p.price }} TND</p>
                 </div>
               </ion-text>
             </ion-label>

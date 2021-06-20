@@ -35,7 +35,7 @@ export class ProductService {
     );
   }
   getAllCategories() {
-    return this.httpClient.get<CategoryModel[]>(`${this.url}/Categories`).toPromise();
+    return this.httpClient.get<CategoryModel[]>(`${this.url}/categories`);
   }
 
   getCategoryById(): Observable<CategoryModel> {

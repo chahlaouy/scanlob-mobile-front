@@ -11,6 +11,11 @@ import { AppComponent } from './app.component';
 
 import { MenuComponent } from './layouts/menu/menu.component'
 
+import { IonicStorageModule } from '@ionic/storage-angular'
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -22,7 +27,8 @@ import { MenuComponent } from './layouts/menu/menu.component'
     IonicModule.forRoot(), 
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    IonicStorageModule.forRoot()
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

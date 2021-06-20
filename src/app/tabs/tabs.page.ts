@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
   styleUrls: ['tabs.page.scss'],
 })
-export class TabsPage {
-  constructor(public actionSheetController: ActionSheetController) {}
+export class TabsPage implements OnInit{
+
+
+  public cart: any
+  public total: any
+  
+  constructor(public actionSheetController: ActionSheetController,private cartService: CartService) {}
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: "Déclaration D'un Object",
@@ -44,5 +50,13 @@ export class TabsPage {
     const { role } = await actionSheet.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
     
+  }
+
+  ngOnInit(){
+    this.cartService.cartData.subscribe(data => {
+      this.cart = data;
+    });
+
+    this.cartService.cartTotal.subscribe(total => this.total = total);
   }
 }
